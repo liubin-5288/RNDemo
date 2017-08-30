@@ -6,7 +6,7 @@ import {
     Text
 } from 'react-native';
 
-import homeMessage from '../jsondata/homeMessage.json'
+import HomeMessage from '../jsondata/homeMessage.json'
 import HemoMessageList from './HomeMessageList'
 
 export default class Home extends Component{
@@ -14,9 +14,21 @@ export default class Home extends Component{
     render() {
         return (
             <HemoMessageList
-                datas = {homeMessage}/>
+                datas = {HomeMessage}
+                onClick = {this._itemClick}
+            />
         );
     }
+
+    _itemClick = (item)=>{
+        if(item.itemType == 3){
+            this.props.navigation.navigate('ChatDetail')
+        }else {
+            alert(item.title)
+        }
+    }
+
+
 
 }
 

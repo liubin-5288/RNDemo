@@ -1,0 +1,44 @@
+{
+  "data":[
+    {
+      "msgType":1, //1 文本，2 图片 ,3 语音，4 视频
+      "msg":"呵呵,你真逗",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,    //聊天模式
+      "receiverId":5,    //收信人
+      "senderId":9   //发信人
+    },
+    {
+      "msgType":1,
+      "msg":"对你无语呀",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,
+      "receiverId":9,
+      "senderId":5
+    },
+    {
+      "msgType":1,
+      "msg":"呵呵",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,
+      "receiverId":5,
+      "senderId":7
+    },
+    {
+      "msgType":1,
+      "msg":"你干嘛呢？",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,
+      "receiverId":7,
+      "senderId":6
+    },
+    {
+      "msgType":1,
+      "msg":"逗逗",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,
+      "receiverId":5,
+      "senderId":7
+    }
+  ]
+}

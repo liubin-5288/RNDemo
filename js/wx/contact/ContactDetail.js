@@ -27,6 +27,10 @@ export default class ContactDetail extends Component{
                 <CommonTitleBar
                     nav = {this.props.navigation}
                     backTitle="详细资料"
+                    rightRimg={require('../imgs/ic_add.png')}
+                    onRightButtonClick={()=>{
+                        alert('瞧瞧')
+                    }}
                 />
 
                 <View style={styles.itemViewStyle}>

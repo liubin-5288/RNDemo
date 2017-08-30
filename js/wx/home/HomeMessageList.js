@@ -30,17 +30,17 @@ export default class HomeMessageList extends PureComponent{
 
     }
 
-    renderItem = ({item,index}) =>{
+    renderItem = ({item}) =>{
         return (
             <TouchableHighlight
                 activeOpactity={0.7}
                 underlayColor="#e3e3e3"
-                onPress = { ()=> {
-                    alert(item.title)
+                onPress = {()=> {
+                    this.props.onClick(item)
                 }}
             >
                 <View style={styles.itemRootViewStyle}>
-                    <Image source={require('../imgs/ic_common.png')} style={{width:50,height:50}}></Image>
+                    <Image source={require('../imgs/ic_common.png')} style={{width:50,height:50}} />
                     <View style={{flexDirection:'row',marginLeft:8,flex:1,justifyContent:'space-between',alignItems:'center'}}>
                         <View>
                             <Text style={styles.titleStyle}>{item.title}</Text>
@@ -55,7 +55,7 @@ export default class HomeMessageList extends PureComponent{
     }
     separatorComponent = ()=>{
         return(
-            <View style={{height:1,backgroundColor:'#e3e3e3'}}></View>
+            <View style={{height:1,backgroundColor:'#e3e3e3'}} />
         )
     }
 
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     // 条目根布局样式
     itemRootViewStyle:{
         flexDirection:'row',
+        backgroundColor:'white',
         padding:10
     },
     // 标题的样式

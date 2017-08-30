@@ -14,6 +14,7 @@ import Find from './find/Find'
 import Me from './me/Me'
 import TabBarIcon from './component/TabBarIcon'
 import ContactDetail from './contact/ContactDetail'
+import ChatDetail from './chat/ChatDetail'
 
 export default class Main extends Component {
     render() {
@@ -111,7 +112,8 @@ const Tab = TabNavigator({
 const Navigator = StackNavigator(
     {
         Tab: {screen: Tab},
-        ContactDetail:{screen:ContactDetail}
+        ContactDetail:{screen:ContactDetail},
+        ChatDetail:{screen:ChatDetail}
     },
     {
         navigationOptions: {
