@@ -50,14 +50,14 @@ _renderRightView = (props)=>{
             <View style = {{flexDirection : 'row'}}>
                 <TouchableOpacity
                     key = {1}
-                    onPress = {()=>{props.onLeftButtonClick ? props.onLeftButtonClick:null}}
+                    onPress = {()=>{props.onLeftButtonClick ? props.onLeftButtonClick():null}}
                 >
                     <View style = {{width:45,height:45,justifyContent:'center'}}>
                         <Image source = {rightLimg} style = {{width:25,height:25}} />
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    onPress = {()=>{props.onRightButtonClick ? props.onRightButtonClick:null}}
+                    onPress = {()=>{props.onRightButtonClick ? props.onRightButtonClick():null}}
                 >
                     <View style = {{width:45,height:45,justifyContent:'center'}}>
                         <Image source = {rightRimg} style = {{width:25,height:25}} />
@@ -68,7 +68,8 @@ _renderRightView = (props)=>{
     }else {
         rightView.push(
             <TouchableOpacity
-                onPress = {()=>{props.onRightButtonClick ? props.onRightButtonClick:null}}
+                key = {1}
+                onPress = {()=>{props.onRightButtonClick ? props.onRightButtonClick():null}}
             >
                 <View style = {{width:45,height:45,justifyContent:'center',alignItems:'center'}}>
                     <Image source = {rightRimg} style = {{width:25,height:25}} />

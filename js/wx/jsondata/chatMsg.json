@@ -5,15 +5,15 @@
       "msg":"呵呵,你真逗",
       "headImg":"../../imgs/ic_common.png",
       "itemType":3,    //聊天模式
-      "receiverId":5,    //收信人
-      "senderId":9   //发信人
+      "receiverId":10,    //收信人(目前 10 为自己)
+      "senderId":9   //发信人(目前 10 为自己)
     },
     {
       "msgType":1,
       "msg":"对你无语呀",
       "headImg":"../../imgs/ic_common.png",
       "itemType":3,
-      "receiverId":9,
+      "receiverId":10,
       "senderId":5
     },
     {
@@ -21,7 +21,7 @@
       "msg":"呵呵",
       "headImg":"../../imgs/ic_common.png",
       "itemType":3,
-      "receiverId":5,
+      "receiverId":10,
       "senderId":7
     },
     {
@@ -30,7 +30,7 @@
       "headImg":"../../imgs/ic_common.png",
       "itemType":3,
       "receiverId":7,
-      "senderId":6
+      "senderId":10
     },
     {
       "msgType":1,
@@ -38,7 +38,31 @@
       "headImg":"../../imgs/ic_common.png",
       "itemType":3,
       "receiverId":5,
-      "senderId":7
+      "senderId":10
+    },
+    {
+      "msgType":1,
+      "msg":"哈哈哈哈",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,
+      "receiverId":10,
+      "senderId":5
+    },
+    {
+      "msgType":1,
+      "msg":"11打算去哪玩呀",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,
+      "receiverId":5,
+      "senderId":10
+    },
+    {
+      "msgType":1,
+      "msg":"问你话呢？",
+      "headImg":"../../imgs/ic_common.png",
+      "itemType":3,
+      "receiverId":5,
+      "senderId":10
     }
   ]
 }

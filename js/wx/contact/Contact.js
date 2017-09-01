@@ -35,21 +35,25 @@ let headViewData = [
     }
 ]
 
+let linkman = [
+    {key:'s1',renderItem:this.renderItemOrHeadView,data:headViewData},
+    { key: "A", data: [{ title: "AAA正在输入....",img:require('../imgs/ic_common.png') }, { title: "Abigale",img:require('../imgs/ic_common.png')  }, { title: "阿松",img:require('../imgs/ic_common.png')  }]},
+    { key: "B", data: [{ title: "白森" ,img:require('../imgs/ic_common.png')  }, { title: "斌果果" ,img:require('../imgs/ic_common.png') }, { title: "表弟",img:require('../imgs/ic_common.png')  }, { title: "表姐" }, { title: "表叔" }]},
+    { key: "C", data: [{ title: "陈龙",img:require('../imgs/ic_common.png')  }, { title: "陈文涛",img:require('../imgs/ic_common.png')  },{title:"车友会",img:require('../imgs/ic_common.png') }] },
+    { key: "D", data: [{ title: "淡然" ,img:require('../imgs/ic_common.png') }, { title: "段玉龙" },{title:"德行"},{title:"第一名"}] },
+    { key: "W", data: [{ title: "王磊", }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }]},
+]
+
 
 export default class Contact extends Component{
+
+    _keyExtractor = (item,index) => index;
 
     render(){
         return (
             <View style = {styles.container}>
                     <SectionList
-                        sections = {[
-                            {key:'s1',renderItem:this.renderItemOrHeadView,data:headViewData},
-                            { key: "A", data: [{ title: "AAA正在输入....",img:require('../imgs/ic_common.png') }, { title: "Abigale",img:require('../imgs/ic_common.png')  }, { title: "阿松",img:require('../imgs/ic_common.png')  }]},
-                            { key: "B", data: [{ title: "白森" ,img:require('../imgs/ic_common.png')  }, { title: "斌果果" ,img:require('../imgs/ic_common.png') }, { title: "表弟",img:require('../imgs/ic_common.png')  }, { title: "表姐" }, { title: "表叔" }]},
-                            { key: "C", data: [{ title: "陈龙",img:require('../imgs/ic_common.png')  }, { title: "陈文涛",img:require('../imgs/ic_common.png')  },{title:"车友会",img:require('../imgs/ic_common.png') }] },
-                            { key: "D", data: [{ title: "淡然" ,img:require('../imgs/ic_common.png') }, { title: "段玉龙" },{title:"德行"},{title:"第一名"}] },
-                            { key: "W", data: [{ title: "王磊", }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }]},
-                        ]}
+                        sections = {linkman}
                         renderSectionHeader = {this.renderSectionItem}
                         renderItem = {this.renderItemOrHeadView}
                         ItemSeparatorComponent = { ()=> {
@@ -58,6 +62,7 @@ export default class Contact extends Component{
                                 )
                             }
                         }
+                        keyExtractor = {this._keyExtractor}
                     />
                 <SideBar
                     onLetterSelect = {(letter) =>{

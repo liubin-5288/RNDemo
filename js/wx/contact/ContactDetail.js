@@ -21,6 +21,7 @@ export default class ContactDetail extends Component{
 
 
     render(){
+        let params = this.props.navigation.state.params
 
         return (
             <View style = {styles.container}>
@@ -35,7 +36,7 @@ export default class ContactDetail extends Component{
 
                 <View style={styles.itemViewStyle}>
                     <Image source = {require('../imgs/ic_common.png')} style={{width:65,height:65}} />
-                    <Text style={{alignSelf:'flex-start',marginLeft:22,fontSize:16,color:'black'}}>宝贝儿</Text>
+                    <Text style={{alignSelf:'flex-start',marginLeft:22,fontSize:16,color:'black'}}>{params.name}</Text>
                 </View>
 
                 <View style={styles.itemViewStyle}>
